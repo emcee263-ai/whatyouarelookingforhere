@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -40,23 +41,39 @@
 
 body{
     min-height:100vh;
+
     background:
-        radial-gradient(circle at 20% 10%,rgba(219,198,156,.18),transparent 30%),
-        radial-gradient(circle at 80% 80%,rgba(169,111,126,.12),transparent 30%),
+        radial-gradient(
+            circle at 20% 10%,
+            rgba(219,198,156,.18),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 80% 80%,
+            rgba(169,111,126,.12),
+            transparent 30%
+        ),
         var(--cream);
 
     color:var(--ink);
+
     font-family:"DM Sans",sans-serif;
 }
 
-/* PAPER GRAIN */
+
+/* =========================
+   PAPER GRAIN
+========================= */
 
 body::before{
     content:"";
+
     position:fixed;
+
     inset:0;
 
     opacity:.035;
+
     pointer-events:none;
 
     background-image:
@@ -71,23 +88,35 @@ body::before{
     z-index:100;
 }
 
+
 /* =========================
    LOCK SCREEN
 ========================= */
 
 #lockScreen{
     position:fixed;
+
     inset:0;
 
     display:flex;
+
     justify-content:center;
+
     align-items:center;
 
     padding:24px;
 
     background:
-        radial-gradient(circle at 50% 30%,rgba(169,111,126,.18),transparent 40%),
-        linear-gradient(135deg,#f8f1e8,#efe3da);
+        radial-gradient(
+            circle at 50% 30%,
+            rgba(169,111,126,.18),
+            transparent 40%
+        ),
+        linear-gradient(
+            135deg,
+            #f8f1e8,
+            #efe3da
+        );
 
     z-index:50;
 }
@@ -110,8 +139,11 @@ body::before{
 
 .lock-small{
     font-size:11px;
+
     letter-spacing:4px;
+
     text-transform:uppercase;
+
     color:var(--gold);
 
     margin-bottom:22px;
@@ -119,7 +151,9 @@ body::before{
 
 .lock-title{
     font-family:"Cormorant Garamond",serif;
+
     font-size:58px;
+
     line-height:.9;
 
     font-weight:600;
@@ -131,6 +165,7 @@ body::before{
 
 .lock-divider{
     width:70px;
+
     height:1px;
 
     background:var(--gold);
@@ -140,11 +175,13 @@ body::before{
 
 .lock-text{
     max-width:330px;
+
     margin:0 auto 30px;
 
     color:var(--muted);
 
     font-size:14px;
+
     line-height:1.8;
 }
 
@@ -160,6 +197,7 @@ body::before{
     text-align:center;
 
     font-size:17px;
+
     letter-spacing:5px;
 
     color:var(--ink);
@@ -171,7 +209,10 @@ body::before{
 
 #accessCode:focus{
     border-color:var(--gold);
-    box-shadow:0 0 0 3px rgba(176,138,75,.10);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(176,138,75,.10);
 }
 
 .enter-btn{
@@ -184,9 +225,11 @@ body::before{
     border:none;
 
     background:var(--plum);
+
     color:white;
 
     font-size:12px;
+
     font-weight:700;
 
     letter-spacing:2px;
@@ -198,6 +241,7 @@ body::before{
 
 .enter-btn:hover{
     background:var(--rose-dark);
+
     transform:translateY(-1px);
 }
 
@@ -210,6 +254,7 @@ body::before{
 
     color:#a04e5e;
 }
+
 
 /* =========================
    MAIN APP
@@ -225,7 +270,10 @@ body::before{
     padding:60px 22px 100px;
 }
 
-/* HERO */
+
+/* =========================
+   HERO
+========================= */
 
 .hero{
     text-align:center;
@@ -235,7 +283,9 @@ body::before{
 
 .eyebrow{
     font-size:11px;
+
     letter-spacing:4px;
+
     text-transform:uppercase;
 
     color:var(--gold);
@@ -259,6 +309,7 @@ body::before{
 
 .hero-line{
     width:90px;
+
     height:1px;
 
     background:var(--gold);
@@ -272,12 +323,16 @@ body::before{
     margin:auto;
 
     font-size:15px;
+
     line-height:1.8;
 
     color:var(--muted);
 }
 
-/* LETTER GRID */
+
+/* =========================
+   LETTER GRID
+========================= */
 
 .collection{
     display:grid;
@@ -297,7 +352,9 @@ body::before{
 
     border:1px solid var(--line);
 
-    box-shadow:0 10px 35px rgba(48,37,43,.055);
+    box-shadow:
+        0 10px 35px
+        rgba(48,37,43,.055);
 
     cursor:pointer;
 
@@ -307,7 +364,9 @@ body::before{
 .letter-card:hover{
     transform:translateY(-5px);
 
-    box-shadow:0 20px 45px rgba(48,37,43,.10);
+    box-shadow:
+        0 20px 45px
+        rgba(48,37,43,.10);
 
     border-color:var(--gold-soft);
 }
@@ -354,7 +413,10 @@ body::before{
     color:var(--rose-dark);
 }
 
-/* NOTE */
+
+/* =========================
+   NOTE
+========================= */
 
 .note{
     max-width:650px;
@@ -366,6 +428,7 @@ body::before{
     text-align:center;
 
     border-top:1px solid var(--line);
+
     border-bottom:1px solid var(--line);
 }
 
@@ -399,7 +462,10 @@ body::before{
     color:var(--muted);
 }
 
-/* BIRTHDAY */
+
+/* =========================
+   BIRTHDAY
+========================= */
 
 .birthday{
     max-width:720px;
@@ -486,7 +552,10 @@ body::before{
     cursor:not-allowed;
 }
 
-/* FOOTER */
+
+/* =========================
+   FOOTER
+========================= */
 
 footer{
     text-align:center;
@@ -499,6 +568,7 @@ footer{
 
     letter-spacing:1px;
 }
+
 
 /* =========================
    LETTER MODAL
@@ -529,7 +599,9 @@ footer{
 
     background:var(--paper);
 
-    box-shadow:0 30px 90px rgba(0,0,0,.22);
+    box-shadow:
+        0 30px 90px
+        rgba(0,0,0,.22);
 
     position:relative;
 }
@@ -538,9 +610,11 @@ footer{
     position:absolute;
 
     right:18px;
+
     top:18px;
 
     width:35px;
+
     height:35px;
 
     border:1px solid var(--line);
@@ -615,6 +689,30 @@ footer{
     color:var(--plum);
 }
 
+
+/* =========================
+   LOADING
+========================= */
+
+.loading-card{
+    grid-column:1/-1;
+
+    text-align:center;
+
+    cursor:default;
+}
+
+.loading-card:hover{
+    transform:none;
+
+    box-shadow:
+        0 10px 35px
+        rgba(48,37,43,.055);
+
+    border-color:var(--line);
+}
+
+
 /* =========================
    RESPONSIVE
 ========================= */
@@ -654,7 +752,9 @@ footer{
 </style>
 </head>
 
+
 <body>
+
 
 <!-- =========================
      LOCK SCREEN
@@ -809,6 +909,7 @@ footer{
         <button
             class="close-btn"
             onclick="closeLetter()"
+            aria-label="Close letter"
         >
             ×
         </button>
@@ -834,7 +935,48 @@ footer{
 </div>
 
 
+<!-- =========================
+     SUPABASE
+========================= -->
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+
 <script>
+
+/* =========================
+   SUPABASE CONNECTION
+========================= */
+
+const SUPABASE_URL =
+    "https://rdiradsjauskbpuyzuvv.supabase.co";
+
+const SUPABASE_ANON_KEY =
+    "sb_publishable__IkWe4rBY5iuWx3y71s-dA_vzTMFSWh";
+
+const supabaseClient =
+    supabase.createClient(
+        SUPABASE_URL,
+        SUPABASE_ANON_KEY
+    );
+
+
+/* =========================
+   ARCHIVE STATE
+========================= */
+
+let letterCollections = {
+
+    unnecessary: [],
+    checking: [],
+    department: [],
+    remember: [],
+    know: []
+
+};
+
+let visitorId = null;
+
 
 /* =========================
    ACCESS CONTROL
@@ -842,13 +984,19 @@ footer{
 
 const ACCESS_CODE = "0723";
 
-function unlockArchive(){
+
+async function unlockArchive(){
 
     const input =
-        document.getElementById("accessCode");
+        document.getElementById(
+            "accessCode"
+        );
 
     const error =
-        document.getElementById("errorMessage");
+        document.getElementById(
+            "errorMessage"
+        );
+
 
     if(input.value === ACCESS_CODE){
 
@@ -857,26 +1005,33 @@ function unlockArchive(){
             "true"
         );
 
+
         document.getElementById(
             "lockScreen"
-        ).style.display = "none";
+        ).style.display =
+            "none";
+
 
         document.getElementById(
             "archiveApp"
-        ).style.display = "block";
+        ).style.display =
+            "block";
+
 
         error.textContent = "";
 
-        loadLetters();
 
-        updateBirthdayButton();
+        await initialiseArchive();
+
 
     }else{
 
         error.textContent =
             "That's not the code. Try again.";
 
+
         input.value = "";
+
 
         input.focus();
 
@@ -885,749 +1040,24 @@ function unlockArchive(){
 }
 
 
-/* ENTER KEY */
+/* =========================
+   ENTER KEY
+========================= */
 
 document
     .getElementById("accessCode")
-    .addEventListener("keydown",function(e){
+    .addEventListener(
+        "keydown",
+        function(e){
 
-        if(e.key === "Enter"){
-            unlockArchive();
+            if(e.key === "Enter"){
+
+                unlockArchive();
+
+            }
+
         }
-
-    });
-
-
-/* =========================
-   LETTER COLLECTIONS
-========================= */
-
-const letterCollections = {
-
-    unnecessary: [
-
-        {
-            id:"UN-01",
-            title:"A completely unnecessary letter",
-            body:`
-                <p>
-                    This letter serves absolutely no important
-                    purpose whatsoever.
-                </p>
-
-                <p>
-                    I could have sent a message.
-                    I could have said “hey”.
-                    I could have done something normal.
-                </p>
-
-                <p>
-                    Instead, here we are.
-                </p>
-
-                <p>
-                    Mostly, I just wanted to say thank you
-                    for being my friend.
-                </p>
-
-                <p>
-                    That is all.
-                    Carry on with your day.
-                </p>
-
-                <div class="signature">
-                    — Your unnecessarily formal friend
-                </div>
-            `
-        },
-
-        {
-            id:"UN-02",
-            title:"Please take this seriously",
-            body:`
-                <p>
-                    Dear Carleen,
-                </p>
-
-                <p>
-                    This is an extremely serious friendship
-                    document.
-                </p>
-
-                <p>
-                    After careful consideration, I have concluded
-                    that you are officially stuck with me as a friend.
-                </p>
-
-                <p>
-                    There is currently no known procedure for
-                    cancelling this arrangement.
-                </p>
-
-                <p>
-                    Arie may also be considered part of the
-                    general nonsense department.
-                </p>
-
-                <div class="signature">
-                    — The Friendship Office
-                </div>
-            `
-        },
-
-        {
-            id:"UN-03",
-            title:"A very important investigation",
-            body:`
-                <p>
-                    I have been conducting an investigation
-                    into how friendships somehow survive
-                    ridiculous conversations, random moments
-                    and unnecessary nonsense.
-                </p>
-
-                <p>
-                    The investigation remains inconclusive.
-                </p>
-
-                <p>
-                    However, the evidence strongly suggests
-                    that good friendships are allowed to be
-                    completely unserious sometimes.
-                </p>
-
-                <div class="signature">
-                    — Lead Investigator
-                </div>
-            `
-        },
-
-        {
-            id:"UN-04",
-            title:"This could have been a text",
-            body:`
-                <p>
-                    This absolutely could have been a text.
-                </p>
-
-                <p>
-                    But then I thought,
-                    “Why send a normal message when I can make
-                    an entire letter out of it?”
-                </p>
-
-                <p>
-                    Anyway, I hope you're doing alright.
-                </p>
-
-                <p>
-                    And if today is one of those days where
-                    everything feels slightly more complicated
-                    than it should, I hope tomorrow is kinder.
-                </p>
-
-                <div class="signature">
-                    — A friend
-                </div>
-            `
-        },
-
-        {
-            id:"UN-05",
-            title:"For absolutely no reason",
-            body:`
-                <p>
-                    There is no special occasion attached
-                    to this letter.
-                </p>
-
-                <p>
-                    No birthday.
-                    No emergency.
-                    No dramatic announcement.
-                </p>
-
-                <p>
-                    Just a small reminder that friendship
-                    matters, even when nobody is making
-                    a big speech about it.
-                </p>
-
-                <div class="signature">
-                    — That's it. That's the letter.
-                </div>
-            `
-        }
-
-    ],
-
-
-    checking: [
-
-        {
-            id:"JC-01",
-            title:"Just checking in",
-            body:`
-                <p>
-                    Hey Carleen,
-                </p>
-
-                <p>
-                    Just checking in.
-                    Not because anything is wrong.
-                    Just because sometimes it is good
-                    to ask how someone is really doing.
-                </p>
-
-                <p>
-                    I hope you're alright.
-                    I hope you and Arie are doing well.
-                </p>
-
-                <p>
-                    And if things have been a little heavy,
-                    I hope you remember that you don't have
-                    to have everything figured out all at once.
-                </p>
-
-                <div class="signature">
-                    — Your friend
-                </div>
-            `
-        },
-
-        {
-            id:"JC-02",
-            title:"For one of those days",
-            body:`
-                <p>
-                    If today happens to be one of those days,
-                    consider this your reminder to breathe.
-                </p>
-
-                <p>
-                    You do not have to solve everything today.
-                </p>
-
-                <p>
-                    Rest when you can.
-                    Laugh when something is funny.
-                    Take care of yourself and Arie.
-                </p>
-
-                <p>
-                    Tomorrow can deal with tomorrow.
-                </p>
-
-                <div class="signature">
-                    — A friend who checked in
-                </div>
-            `
-        },
-
-        {
-            id:"JC-03",
-            title:"No particular reason",
-            body:`
-                <p>
-                    No particular reason for this letter.
-                </p>
-
-                <p>
-                    Sometimes someone simply crosses your mind
-                    and you think,
-                    “I hope they're doing okay.”
-                </p>
-
-                <p>
-                    That happened.
-                </p>
-
-                <p>
-                    So here we are.
-                </p>
-
-                <div class="signature">
-                    — Nothing dramatic
-                </div>
-            `
-        },
-
-        {
-            id:"JC-04",
-            title:"A small reminder",
-            body:`
-                <p>
-                    You are probably doing better than
-                    you give yourself credit for.
-                </p>
-
-                <p>
-                    Life has a strange habit of making people
-                    focus on everything that still needs fixing
-                    instead of everything they've already managed.
-                </p>
-
-                <p>
-                    So here's the reminder:
-                    give yourself some credit too.
-                </p>
-
-                <p>
-                    Look after yourself.
-                    Look after Arie.
-                    And remember to leave a little room
-                    for yourself as well.
-                </p>
-
-                <div class="signature">
-                    — Your friend
-                </div>
-            `
-        },
-
-        {
-            id:"JC-05",
-            title:"Take a breath",
-            body:`
-                <p>
-                    Stop for a second.
-                </p>
-
-                <p>
-                    Take a breath.
-                </p>
-
-                <p>
-                    Whatever is happening can wait
-                    for thirty seconds.
-                </p>
-
-                <p>
-                    Hopefully somewhere in the middle
-                    of everything, you find a quiet moment
-                    that belongs only to you.
-                </p>
-
-                <div class="signature">
-                    — A quiet reminder
-                </div>
-            `
-        }
-
-    ],
-
-
-    department: [
-
-        {
-            id:"FD-01",
-            title:"Official friendship notice",
-            body:`
-                <p>
-                    Dear Carleen,
-                </p>
-
-                <p>
-                    This notice confirms that your friendship
-                    status remains officially active.
-                </p>
-
-                <p>
-                    There are no outstanding complaints.
-                    There are no cancellation procedures.
-                    The arrangement will automatically renew.
-                </p>
-
-                <div class="signature">
-                    — Department of Friendship
-                </div>
-            `
-        },
-
-        {
-            id:"FD-02",
-            title:"Annual friendship review",
-            body:`
-                <p>
-                    Following a thorough annual review,
-                    your friendship performance has been
-                    assessed as satisfactory.
-                </p>
-
-                <p>
-                    Strengths include:
-                    being yourself,
-                    surviving nonsense,
-                    and continuing to be a good friend.
-                </p>
-
-                <p>
-                    No corrective action is required.
-                </p>
-
-                <div class="signature">
-                    — Human Resources, Friendship Division
-                </div>
-            `
-        },
-
-        {
-            id:"FD-03",
-            title:"Terms and conditions",
-            body:`
-                <p>
-                    By continuing this friendship,
-                    you acknowledge the following terms:
-                </p>
-
-                <p>
-                    Random messages may occur.
-                    Unnecessary jokes may occur.
-                    Serious conversations may also occur.
-                    Appreciation is included at no additional cost.
-                </p>
-
-                <p>
-                    There is currently no unsubscribe button.
-                </p>
-
-                <div class="signature">
-                    — Terms & Conditions
-                </div>
-            `
-        },
-
-        {
-            id:"FD-04",
-            title:"Friendship maintenance",
-            body:`
-                <p>
-                    Recommended friendship maintenance includes:
-                </p>
-
-                <p>
-                    Occasional laughter.
-                    Occasional checking in.
-                    Occasional nonsense.
-                    And remembering that good friendships
-                    do not require constant attention to remain real.
-                </p>
-
-                <div class="signature">
-                    — Maintenance Department
-                </div>
-            `
-        },
-
-        {
-            id:"FD-05",
-            title:"A departmental apology",
-            body:`
-                <p>
-                    The Friendship Department would like
-                    to formally apologise for any unnecessary
-                    nonsense previously experienced.
-                </p>
-
-                <p>
-                    Unfortunately, the department cannot
-                    guarantee that it will stop.
-                </p>
-
-                <p>
-                    But underneath all the nonsense,
-                    I am genuinely glad you're my friend.
-                </p>
-
-                <div class="signature">
-                    — Management
-                </div>
-            `
-        }
-
-    ],
-
-
-    remember: [
-
-        {
-            id:"RW-01",
-            title:"Keep this one",
-            body:`
-                <p>
-                    People become part of your story
-                    in ways you don't always notice immediately.
-                </p>
-
-                <p>
-                    A conversation here.
-                    A laugh there.
-                    A completely random memory somewhere
-                    in between.
-                </p>
-
-                <p>
-                    I'm glad you became part of mine.
-                </p>
-
-                <div class="signature">
-                    — A friend
-                </div>
-            `
-        },
-
-        {
-            id:"RW-02",
-            title:"The ordinary moments",
-            body:`
-                <p>
-                    Some of the moments we remember most
-                    are not the big ones.
-                </p>
-
-                <p>
-                    They're the ordinary conversations.
-                    The jokes.
-                    The random things that made absolutely
-                    no sense at the time.
-                </p>
-
-                <p>
-                    Those little moments have a way of becoming
-                    memories before we even realise it.
-                </p>
-
-                <div class="signature">
-                    — Keep the ordinary moments
-                </div>
-            `
-        },
-
-        {
-            id:"RW-03",
-            title:"Don't forget yourself",
-            body:`
-                <p>
-                    You're probably very good at taking care
-                    of the people around you.
-                </p>
-
-                <p>
-                    But remember that you're a person too.
-                </p>
-
-                <p>
-                    You deserve kindness.
-                    You deserve rest.
-                    You deserve moments that are simply yours.
-                </p>
-
-                <p>
-                    Look after yourself while you're looking
-                    after Arie and everyone else.
-                </p>
-
-                <div class="signature">
-                    — Your friend
-                </div>
-            `
-        },
-
-        {
-            id:"RW-04",
-            title:"A quiet thank you",
-            body:`
-                <p>
-                    There are probably many things
-                    that don't need to be said.
-                </p>
-
-                <p>
-                    But “thank you” is worth saying.
-                </p>
-
-                <p>
-                    Thank you for the friendship.
-                    For the conversations.
-                    For the laughs.
-                    For simply being yourself.
-                </p>
-
-                <div class="signature">
-                    — Thank you
-                </div>
-            `
-        },
-
-        {
-            id:"RW-05",
-            title:"For the future",
-            body:`
-                <p>
-                    I hope the future gives you plenty
-                    of reasons to laugh.
-                </p>
-
-                <p>
-                    I hope there are peaceful days,
-                    good people,
-                    unexpected good news,
-                    and enough nonsense to keep things interesting.
-                </p>
-
-                <p>
-                    And I hope Arie grows up surrounded
-                    by plenty of love and good memories.
-                </p>
-
-                <div class="signature">
-                    — For whatever comes next
-                </div>
-            `
-        }
-
-    ],
-
-
-    know: [
-
-        {
-            id:"JS-01",
-            title:"Just so you know",
-            body:`
-                <p>
-                    I'm genuinely glad you're my friend.
-                </p>
-
-                <p>
-                    Nothing complicated behind that sentence.
-                    No hidden meaning.
-                    Just appreciation for a friendship
-                    that I value.
-                </p>
-
-                <p>
-                    You don't even have to reply to this.
-                </p>
-
-                <div class="signature">
-                    — Your friend
-                </div>
-            `
-        },
-
-        {
-            id:"JS-02",
-            title:"You are appreciated",
-            body:`
-                <p>
-                    Sometimes people need to be reminded
-                    that their presence matters.
-                </p>
-
-                <p>
-                    So here is the reminder:
-                    you are appreciated.
-                </p>
-
-                <p>
-                    Not because of anything spectacular.
-                    Simply because you are you.
-                </p>
-
-                <div class="signature">
-                    — A friend
-                </div>
-            `
-        },
-
-        {
-            id:"JS-03",
-            title:"No response required",
-            body:`
-                <p>
-                    No response required.
-                </p>
-
-                <p>
-                    This is simply one of those letters
-                    that says:
-                    I hope life is kind to you.
-                </p>
-
-                <p>
-                    I hope you and Arie have plenty of good days.
-                </p>
-
-                <p>
-                    And I hope you remember to take care
-                    of yourself too.
-                </p>
-
-                <div class="signature">
-                    — That's all
-                </div>
-            `
-        },
-
-        {
-            id:"JS-04",
-            title:"A good thing",
-            body:`
-                <p>
-                    Good people are one of life's quiet gifts.
-                </p>
-
-                <p>
-                    Sometimes friendship is simply having
-                    someone you can talk to without needing
-                    to make everything perfect.
-                </p>
-
-                <p>
-                    I'm glad this friendship exists.
-                </p>
-
-                <div class="signature">
-                    — A friend
-                </div>
-            `
-        },
-
-        {
-            id:"JS-05",
-            title:"Whenever you find this",
-            body:`
-                <p>
-                    Whenever you happen to find this letter,
-                    I hope you're doing okay.
-                </p>
-
-                <p>
-                    If you're having a good day,
-                    enjoy it properly.
-                </p>
-
-                <p>
-                    If you're having a difficult day,
-                    be gentle with yourself.
-                </p>
-
-                <p>
-                    And whichever kind of day it is,
-                    remember to look after yourself and Arie.
-                </p>
-
-                <div class="signature">
-                    — Your friend
-                </div>
-            `
-        }
-
-    ]
-
-};
+    );
 
 
 /* =========================
@@ -1638,105 +1068,469 @@ const categories = [
 
     {
         key:"unnecessary",
+
         number:"01",
-        title:"A completely unnecessary letter",
+
+        title:
+            "A completely unnecessary letter",
+
         description:
             "A letter that could have been a text. Probably."
+
     },
 
     {
         key:"checking",
+
         number:"02",
-        title:"Just checking in",
+
+        title:
+            "Just checking in",
+
         description:
             "For the days when someone simply needs to hear from a friend."
+
     },
 
     {
         key:"department",
+
         number:"03",
-        title:"The friendship department",
+
+        title:
+            "The friendship department",
+
         description:
             "Official notices from a department that probably shouldn't exist."
+
     },
 
     {
         key:"remember",
+
         number:"04",
-        title:"Some things worth remembering",
+
+        title:
+            "Some things worth remembering",
+
         description:
             "A few quiet thoughts that are worth keeping somewhere."
+
     },
 
     {
         key:"know",
+
         number:"05",
-        title:"Just so you know",
+
+        title:
+            "Just so you know",
+
         description:
             "Things that don't need a special occasion to be said."
+
     }
 
 ];
 
 
 /* =========================
-   RANDOM LETTER MEMORY
+   LOAD LETTERS FROM SUPABASE
 ========================= */
 
-function getLetterMemory(){
+async function loadLettersFromSupabase(){
 
-    try{
-
-        return JSON.parse(
-            localStorage.getItem(
-                "theArchiveLetterMemory"
+    const {
+        data,
+        error
+    } =
+        await supabaseClient
+            .from("letters")
+            .select(`
+                id,
+                letter_code,
+                category,
+                title,
+                body,
+                display_order
+            `)
+            .eq(
+                "published",
+                true
             )
-        ) || {};
+            .order(
+                "display_order",
+                {
+                    ascending:true
+                }
+            );
 
-    }catch(e){
 
-        return {};
+    if(error){
+
+        console.error(
+            "Supabase letter error:",
+            error
+        );
+
+        return false;
 
     }
 
-}
+
+    letterCollections = {
+
+        unnecessary: [],
+        checking: [],
+        department: [],
+        remember: [],
+        know: []
+
+    };
 
 
-function saveLetterMemory(memory){
+    data.forEach(
+        letter => {
 
-    localStorage.setItem(
-        "theArchiveLetterMemory",
-        JSON.stringify(memory)
+            if(
+                letterCollections[
+                    letter.category
+                ]
+            ){
+
+                letterCollections[
+                    letter.category
+                ].push({
+
+                    id:
+                        letter.id,
+
+                    code:
+                        letter.letter_code,
+
+                    title:
+                        letter.title,
+
+                    body:
+                        letter.body
+
+                });
+
+            }
+
+        }
     );
 
+
+    return true;
+
 }
 
 
-function chooseLetter(category){
+/* =========================
+   VISITOR MEMORY
+========================= */
+
+async function initialiseVisitor(){
+
+    let visitorCode =
+        localStorage.getItem(
+            "archiveVisitorCode"
+        );
+
+
+    if(!visitorCode){
+
+        if(
+            window.crypto &&
+            crypto.randomUUID
+        ){
+
+            visitorCode =
+                crypto.randomUUID();
+
+        }else{
+
+            visitorCode =
+                "visitor-" +
+                Date.now() +
+                "-" +
+                Math.random()
+                    .toString(36)
+                    .substring(2);
+
+        }
+
+
+        localStorage.setItem(
+            "archiveVisitorCode",
+            visitorCode
+        );
+
+    }
+
+
+    /*
+       Look for an existing visitor.
+    */
+
+    const existing =
+        await supabaseClient
+            .from("archive_visitors")
+            .select("id")
+            .eq(
+                "visitor_code",
+                visitorCode
+            )
+            .maybeSingle();
+
+
+    if(
+        existing.data &&
+        existing.data.id
+    ){
+
+        visitorId =
+            existing.data.id;
+
+
+        localStorage.setItem(
+            "archiveVisitorId",
+            visitorId
+        );
+
+
+        return;
+
+    }
+
+
+    /*
+       Create visitor if necessary.
+    */
+
+    const created =
+        await supabaseClient
+            .from("archive_visitors")
+            .insert({
+
+                visitor_code:
+                    visitorCode
+
+            })
+            .select("id")
+            .single();
+
+
+    if(
+        created.data &&
+        created.data.id
+    ){
+
+        visitorId =
+            created.data.id;
+
+
+        localStorage.setItem(
+            "archiveVisitorId",
+            visitorId
+        );
+
+
+        return;
+
+    }
+
+
+    /*
+       Try again if the visitor was
+       created simultaneously.
+    */
+
+    const retry =
+        await supabaseClient
+            .from("archive_visitors")
+            .select("id")
+            .eq(
+                "visitor_code",
+                visitorCode
+            )
+            .maybeSingle();
+
+
+    if(
+        retry.data &&
+        retry.data.id
+    ){
+
+        visitorId =
+            retry.data.id;
+
+
+        localStorage.setItem(
+            "archiveVisitorId",
+            visitorId
+        );
+
+    }
+
+}
+
+
+/* =========================
+   READ HISTORY
+========================= */
+
+async function getReadHistory(){
+
+    if(!visitorId){
+
+        return [];
+
+    }
+
+
+    const {
+        data,
+        error
+    } =
+        await supabaseClient
+            .from("letter_reads")
+            .select(
+                "letter_id, opened_at"
+            )
+            .eq(
+                "visitor_id",
+                visitorId
+            )
+            .order(
+                "opened_at",
+                {
+                    ascending:false
+                }
+            );
+
+
+    if(error){
+
+        console.error(
+            "Could not load letter history:",
+            error
+        );
+
+        return [];
+
+    }
+
+
+    return data || [];
+
+}
+
+
+/* =========================
+   CHOOSE LETTER
+========================= */
+
+async function chooseLetter(
+    category
+){
 
     const letters =
-        letterCollections[category];
+        letterCollections[
+            category
+        ];
 
-    let memory =
-        getLetterMemory();
 
-    if(!memory[category]){
-        memory[category] = [];
+    if(
+        !letters ||
+        letters.length === 0
+    ){
+
+        return null;
+
     }
+
+
+    const history =
+        await getReadHistory();
+
+
+    const categoryIds =
+        letters.map(
+            letter =>
+                letter.id
+        );
+
+
+    const recentIds = [];
+
+
+    for(
+        const read of history
+    ){
+
+        if(
+            categoryIds.includes(
+                read.letter_id
+            )
+        ){
+
+            if(
+                !recentIds.includes(
+                    read.letter_id
+                )
+            ){
+
+                recentIds.push(
+                    read.letter_id
+                );
+
+            }
+
+        }
+
+
+        if(
+            recentIds.length >= 3
+        ){
+
+            break;
+
+        }
+
+    }
+
+
+    /*
+       Avoid the last three letters
+       opened in this category.
+    */
 
     let available =
         letters.filter(
             letter =>
-                !memory[category].includes(letter.id)
+                !recentIds.includes(
+                    letter.id
+                )
         );
 
-    if(available.length === 0){
 
-        memory[category] = [];
+    /*
+       If every letter has recently
+       been opened, restart the pool.
+    */
 
-        available = [...letters];
+    if(
+        available.length === 0
+    ){
+
+        available = [
+            ...letters
+        ];
 
     }
+
 
     const selected =
         available[
@@ -1746,20 +1540,51 @@ function chooseLetter(category){
             )
         ];
 
-    memory[category].push(selected.id);
 
-    /* Keep only last 3 opened */
+    return selected;
 
-    if(memory[category].length > 3){
+}
 
-        memory[category] =
-            memory[category].slice(-3);
+
+/* =========================
+   RECORD LETTER READ
+========================= */
+
+async function recordLetterRead(
+    letterId
+){
+
+    if(!visitorId){
+
+        return;
 
     }
 
-    saveLetterMemory(memory);
 
-    return selected;
+    const {
+        error
+    } =
+        await supabaseClient
+            .from("letter_reads")
+            .insert({
+
+                visitor_id:
+                    visitorId,
+
+                letter_id:
+                    letterId
+
+            });
+
+
+    if(error){
+
+        console.error(
+            "Could not record letter read:",
+            error
+        );
+
+    }
 
 }
 
@@ -1775,42 +1600,56 @@ function loadLetters(){
             "letterCollection"
         );
 
+
     container.innerHTML = "";
 
-    categories.forEach(category => {
 
-        const card =
-            document.createElement("article");
+    categories.forEach(
+        category => {
 
-        card.className =
-            "letter-card";
+            const card =
+                document.createElement(
+                    "article"
+                );
 
-        card.innerHTML = `
 
-            <div class="card-number">
-                ${category.number}
-            </div>
+            card.className =
+                "letter-card";
 
-            <h2>
-                ${category.title}
-            </h2>
 
-            <p>
-                ${category.description}
-            </p>
+            card.innerHTML = `
 
-            <div class="open-label">
-                OPEN A LETTER →
-            </div>
+                <div class="card-number">
+                    ${category.number}
+                </div>
 
-        `;
+                <h2>
+                    ${category.title}
+                </h2>
 
-        card.onclick = () =>
-            openRandomLetter(category.key);
+                <p>
+                    ${category.description}
+                </p>
 
-        container.appendChild(card);
+                <div class="open-label">
+                    OPEN A LETTER →
+                </div>
 
-    });
+            `;
+
+
+            card.onclick = () =>
+                openRandomLetter(
+                    category.key
+                );
+
+
+            container.appendChild(
+                card
+            );
+
+        }
+    );
 
 }
 
@@ -1819,33 +1658,63 @@ function loadLetters(){
    OPEN RANDOM LETTER
 ========================= */
 
-function openRandomLetter(category){
+async function openRandomLetter(
+    category
+){
 
     const letter =
-        chooseLetter(category);
+        await chooseLetter(
+            category
+        );
+
+
+    if(!letter){
+
+        alert(
+            "This collection could not be loaded. Please refresh the archive."
+        );
+
+        return;
+
+    }
+
 
     document.getElementById(
         "modalMeta"
     ).textContent =
-        "A letter from the collection";
+        letter.code +
+        " • A letter from the collection";
+
 
     document.getElementById(
         "modalTitle"
     ).textContent =
         letter.title;
 
+
     document.getElementById(
         "modalBody"
     ).innerHTML =
         letter.body;
+
 
     document.getElementById(
         "letterModal"
     ).style.display =
         "block";
 
+
     document.body.style.overflow =
         "hidden";
+
+
+    /*
+       Save the read to Supabase.
+    */
+
+    await recordLetterRead(
+        letter.id
+    );
 
 }
 
@@ -1861,23 +1730,31 @@ function closeLetter(){
     ).style.display =
         "none";
 
+
     document.body.style.overflow =
         "";
 
 }
 
 
-/* CLICK OUTSIDE */
+/* =========================
+   CLICK OUTSIDE
+========================= */
 
 document
     .getElementById("letterModal")
-    .addEventListener("click",function(e){
+    .addEventListener(
+        "click",
+        function(e){
 
-        if(e.target === this){
-            closeLetter();
+            if(e.target === this){
+
+                closeLetter();
+
+            }
+
         }
-
-    });
+    );
 
 
 /* =========================
@@ -1888,6 +1765,7 @@ function isBirthdayUnlocked(){
 
     const today =
         new Date();
+
 
     return (
         today.getMonth() === 9 &&
@@ -1904,9 +1782,14 @@ function updateBirthdayButton(){
             "birthdayButton"
         );
 
-    if(isBirthdayUnlocked()){
 
-        button.disabled = false;
+    if(
+        isBirthdayUnlocked()
+    ){
+
+        button.disabled =
+            false;
+
 
         button.innerHTML =
             "✦ OPEN YOUR BIRTHDAY LETTER";
@@ -1918,26 +1801,32 @@ function updateBirthdayButton(){
 
 function openBirthdayLetter(){
 
-    if(!isBirthdayUnlocked()){
+    if(
+        !isBirthdayUnlocked()
+    ){
 
         return;
 
     }
+
 
     localStorage.setItem(
         "birthdayLetterOpened",
         "true"
     );
 
+
     document.getElementById(
         "modalMeta"
     ).textContent =
         "BD-2026 • Special Letter";
 
+
     document.getElementById(
         "modalTitle"
     ).textContent =
         "Happy Birthday, Carleen.";
+
 
     document.getElementById(
         "modalBody"
@@ -1994,13 +1883,116 @@ function openBirthdayLetter(){
 
     `;
 
+
     document.getElementById(
         "letterModal"
     ).style.display =
         "block";
 
+
     document.body.style.overflow =
         "hidden";
+
+}
+
+
+/* =========================
+   INITIALISE ARCHIVE
+========================= */
+
+async function initialiseArchive(){
+
+    const container =
+        document.getElementById(
+            "letterCollection"
+        );
+
+
+    /*
+       Show loading state.
+    */
+
+    container.innerHTML = `
+
+        <article
+            class="letter-card loading-card"
+        >
+
+            <div class="card-number">
+                ARCHIVE
+            </div>
+
+            <h2>
+                Opening the collection…
+            </h2>
+
+            <p>
+                Just a moment while the letters
+                are retrieved.
+            </p>
+
+        </article>
+
+    `;
+
+
+    /*
+       Create or recover visitor.
+    */
+
+    await initialiseVisitor();
+
+
+    /*
+       Load letters from Supabase.
+    */
+
+    const loaded =
+        await loadLettersFromSupabase();
+
+
+    if(!loaded){
+
+        container.innerHTML = `
+
+            <article
+                class="letter-card loading-card"
+            >
+
+                <div class="card-number">
+                    ARCHIVE ERROR
+                </div>
+
+                <h2>
+                    The letters are temporarily unavailable.
+                </h2>
+
+                <p>
+                    Please refresh the page and try again.
+                </p>
+
+            </article>
+
+        `;
+
+
+        return;
+
+    }
+
+
+    /*
+       Display the five categories.
+    */
+
+    loadLetters();
+
+
+    /*
+       Update birthday status.
+    */
+
+    updateBirthdayButton();
 
 }
 
@@ -2011,7 +2003,7 @@ function openBirthdayLetter(){
 
 window.addEventListener(
     "DOMContentLoaded",
-    function(){
+    async function(){
 
         if(
             sessionStorage.getItem(
@@ -2024,14 +2016,14 @@ window.addEventListener(
             ).style.display =
                 "none";
 
+
             document.getElementById(
                 "archiveApp"
             ).style.display =
                 "block";
 
-            loadLetters();
 
-            updateBirthdayButton();
+            await initialiseArchive();
 
         }
 
